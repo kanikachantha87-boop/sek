@@ -27,19 +27,19 @@ export default function TypePage() {
         </div>
 
         {/* ប៊ូតុងប្រភេទ */}
-        <div className="flex gap-2 overflow-x-auto pb-3 scrollbar-hide mb-6">
+        <div className="grid grid-cols-2 gap-4 mb-8">
           {[
-            { label: 'បន្លែ', icon: '🥦' },
-            { label: 'នំខ្មែរ', icon: '🍮' },
-            { label: 'ភេសជ្ជៈ', icon: '🧃' },
-            { label: 'ផ្លែឈើ', icon: '🍓' },
+            { label: 'បន្លែ', icon: '🥦', gradient: 'from-green-900/60 to-dark-card' },
+            { label: 'នំខ្មែរ', icon: '🍮', gradient: 'from-amber-900/60 to-dark-card' },
+            { label: 'ភេសជ្ជៈ', icon: '🧃', gradient: 'from-blue-900/60 to-dark-card' },
+            { label: 'ផ្លែឈើ', icon: '🍓', gradient: 'from-red-900/60 to-dark-card' },
           ].map((btn) => (
             <button
               key={btn.label}
-              className="flex-shrink-0 flex items-center gap-2 px-4 py-2 bg-dark-card rounded-full border border-coral/30 hover:border-coral hover:bg-coral/10 transition-all text-sm font-body font-medium"
+              className={`bg-gradient-to-br ${btn.gradient} rounded-3xl p-6 flex flex-col items-center justify-center gap-4 border border-coral/20 hover:border-coral hover:scale-105 transition-all shadow-lg h-40`}
             >
-              <span>{btn.icon}</span>
-              <span>{btn.label}</span>
+              <span className="text-5xl">{btn.icon}</span>
+              <span className="font-headline font-bold text-xl">{btn.label}</span>
             </button>
           ))}
         </div>
@@ -49,15 +49,10 @@ export default function TypePage() {
           {foodTypes.map((type) => (
             <button
               key={type.name}
-              className="bg-dark-card rounded-3xl p-6 flex flex-col items-center gap-3 hover:bg-dark-card/80 hover:scale-105 transition-all shadow-lg group"
+              className="bg-dark-card rounded-3xl p-6 flex flex-col items-center gap-2 hover:bg-dark-card/80 hover:scale-105 transition-all shadow-lg"
             >
-              <div className="w-20 h-20 bg-gradient-to-br from-amber-900/40 to-dark rounded-2xl flex items-center justify-center text-4xl group-hover:scale-110 transition-transform shadow-inner">
-                {type.icon}
-              </div>
-              <div className="text-center">
-                <h3 className="font-headline font-bold text-lg">{type.name}</h3>
-                <p className="text-coral text-xs font-body mt-1">{type.count}</p>
-              </div>
+              <h3 className="font-headline font-bold text-lg">{type.name}</h3>
+              <p className="text-coral text-xs font-body">{type.count}</p>
             </button>
           ))}
         </div>

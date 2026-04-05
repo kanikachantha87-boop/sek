@@ -2,43 +2,40 @@
 
 import Header from '@/components/Header'
 import { Search, ShieldCheck, Stethoscope, Heart, AlertTriangle } from 'lucide-react'
+import Link from 'next/link'
 
 const mainButtons = [
   {
     id: 1,
     label: 'សុវត្ថិភាពចំណីអាហារ',
-    icon: ShieldCheck,
     gradient: 'from-green-800 to-green-950',
     border: 'border-green-600/40',
-    iconColor: 'text-green-400',
     emoji: '🛡️',
+    href: '/home/food-safety',
   },
   {
     id: 2,
     label: 'ជំងឺផ្សេងៗ',
-    icon: Stethoscope,
     gradient: 'from-red-800 to-red-950',
     border: 'border-red-600/40',
-    iconColor: 'text-red-400',
     emoji: '🏥',
+    href: '#',
   },
   {
     id: 3,
     label: 'អត្ថប្រយោជន៍នៃសុខភាព',
-    icon: Heart,
     gradient: 'from-pink-800 to-pink-950',
     border: 'border-pink-600/40',
-    iconColor: 'text-pink-400',
     emoji: '💪',
+    href: '#',
   },
   {
     id: 4,
     label: 'ផលវិបាកដែលកើតឡើងអំពីចំណីអាហារ',
-    icon: AlertTriangle,
     gradient: 'from-amber-800 to-amber-950',
     border: 'border-amber-600/40',
-    iconColor: 'text-amber-400',
     emoji: '⚠️',
+    href: '#',
   },
 ]
 
@@ -68,15 +65,16 @@ export default function HomePage() {
         {/* Button ធំ ៤ */}
         <div className="grid grid-cols-2 gap-4">
           {mainButtons.map((btn) => (
-            <button
+            <Link
               key={btn.id}
+              href={btn.href}
               className={`bg-gradient-to-br ${btn.gradient} border ${btn.border} rounded-3xl p-5 flex flex-col items-center justify-center gap-3 hover:scale-105 transition-all shadow-xl h-44`}
             >
               <span className="text-5xl">{btn.emoji}</span>
               <span className="font-headline font-bold text-sm text-center leading-snug text-white">
                 {btn.label}
               </span>
-            </button>
+            </Link>
           ))}
         </div>
       </main>

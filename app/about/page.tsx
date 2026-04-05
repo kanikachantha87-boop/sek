@@ -6,22 +6,11 @@ const curators = [
   { name: 'នាយកផ្នែករចនា', image: '👨‍🍳' },
   { name: 'ប្រធានផ្នែកម្ហូប', image: '👨‍🍳' },
   { name: 'អ្នករចនា UX', image: '👩‍💼' },
-] < path strokeLinecap = "round" strokeLinejoin = "round" strokeWidth = { 2} d = "M4 6h16M4 12h16M4 18h16" />
-            </svg >
-          </button >
-          >
-  កន្លែងធ្វើម្ហូប
-          </h1 >
-  <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-coral">
-    <div className="w-full h-full bg-gradient-to-br from-coral to-coral-dark flex items-center justify-center text-white font-headline font-bold text-xs">
-      ម្ហូប
-    </div>
-  </div>
-        </div >
+]
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-light-peach text-dark pb-24">
-      {/* ក្បាលទំព័រ */}
       <header className="sticky top-0 z-40 bg-light-peach border-b border-coral/20">
         <div className="flex items-center justify-between px-5 py-4">
           <button className="text-dark hover:text-coral transition-colors">
@@ -41,7 +30,6 @@ export default function AboutPage() {
       </header>
 
       <main className="px-6 py-8 space-y-8">
-        {/* ផ្នែកវីរបុរស */}
         <div className="text-center">
           <div className="w-48 h-48 mx-auto mb-6 bg-dark rounded-3xl overflow-hidden shadow-2xl">
             <div className="w-full h-full flex items-center justify-center text-7xl">
@@ -60,15 +48,16 @@ export default function AboutPage() {
           </h2>
         </div>
 
-        {/* បេសកកម្ម */}
         <div className="bg-gradient-to-br from-amber-900/90 to-dark-burgundy text-light-peach rounded-3xl p-8 shadow-xl">
           <h3 className="font-headline text-2xl font-bold mb-4">បេសកកម្មរបស់យើង</h3>
           <p className="font-body text-sm leading-relaxed text-light-peach/90">
-            នៅ កន្លែងធ្វើម្ហូប យើងជឿថាការចម្អិនម្ហូបគឺច្រើនជាងការរៀបចំ — វាជាការសន្ទនារវាងវប្បធម៌ ធម្មជាតិ និងការច្នៃប្រឌិត។ វេទិការបស់យើងភ្ជាប់គម្លាតរវាងភាពងាយស្រួលឌីជីថល និងព្រលឹងសិប្បករ ដើម្បីផ្តល់អំណាចដល់មេចុងភៅក្នុងផ្ទះឱ្យស្វែងរកទេពកោសល្យខ្លួនឯង។
+            នៅ កន្លែងធ្វើម្ហូប យើងជឿថាការចម្អិនម្ហូបគឺច្រើនជាងការរៀបចំ។
+            វាជាការសន្ទនារវាងវប្បធម៌ ធម្មជាតិ និងការច្នៃប្រឌិត។
+            វេទិការបស់យើងភ្ជាប់គម្លាតរវាងភាពងាយស្រួលឌីជីថល និងព្រលឹងសិប្បករ
+            ដើម្បីផ្តល់អំណាចដល់មេចុងភៅក្នុងផ្ទះឱ្យស្វែងរកទេពកោសល្យខ្លួនឯង។
           </p>
         </div>
 
-        {/* កំណែ */}
         <div className="bg-gradient-to-br from-coral-light to-coral text-white rounded-3xl p-6 shadow-lg">
           <div className="flex items-center gap-3 mb-2">
             <Settings className="w-5 h-5" />
@@ -77,7 +66,6 @@ export default function AboutPage() {
           <div className="font-headline text-4xl font-bold">១.០.០</div>
         </div>
 
-        {/* អ្នករៀបចំ */}
         <section>
           <h3 className="font-headline text-3xl font-bold text-center mb-8 text-dark">
             អ្នករៀបចំ
@@ -98,7 +86,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ចូលរួមជាមួយយើង */}
         <div className="text-center pt-8">
           <p className="text-coral/60 text-xs tracking-[0.3em] font-body font-medium mb-6">
             ចូលរួមជាមួយយើង

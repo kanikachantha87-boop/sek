@@ -149,8 +149,8 @@ export default function HomePage() {
                   <p className="text-gray-400 text-xs font-body line-clamp-2">{item.description}</p>
                   <p className="text-coral text-xl font-headline font-bold mt-2">${item.price.toFixed(2)}</p>
                 </div>
-                <button className="btn-primary px-6 py-2 text-sm flex-shrink-0">
-                  បន្ថែម
+                <button className="btn-primary px-4 py-2 text-sm flex-shrink-0">
+                  +
                 </button>
               </div>
             ))}

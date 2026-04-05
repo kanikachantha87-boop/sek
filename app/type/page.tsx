@@ -26,6 +26,24 @@ export default function TypePage() {
           <p className="text-gray-400 font-body text-sm mt-1">ជ្រើសរើសប្រភេទដែលអ្នកចូលចិត្ត</p>
         </div>
 
+        {/* ប៊ូតុងប្រភេទ */}
+        <div className="flex gap-2 overflow-x-auto pb-3 scrollbar-hide mb-6">
+          {[
+            { label: 'បន្លែ', icon: '🥦' },
+            { label: 'នំខ្មែរ', icon: '🍮' },
+            { label: 'ភេសជ្ជៈ', icon: '🧃' },
+            { label: 'ផ្លែឈើ', icon: '🍓' },
+          ].map((btn) => (
+            <button
+              key={btn.label}
+              className="flex-shrink-0 flex items-center gap-2 px-4 py-2 bg-dark-card rounded-full border border-coral/30 hover:border-coral hover:bg-coral/10 transition-all text-sm font-body font-medium"
+            >
+              <span>{btn.icon}</span>
+              <span>{btn.label}</span>
+            </button>
+          ))}
+        </div>
+
         {/* ក្រឡាប្រភេទ */}
         <div className="grid grid-cols-2 gap-4">
           {foodTypes.map((type) => (

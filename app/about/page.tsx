@@ -1,7 +1,7 @@
 'use client'
 
 import Header from '@/components/Header'
-import { Settings, Instagram, Twitter, Youtube } from 'lucide-react'
+import { Settings, Camera, X, Play } from 'lucide-react'
 
 const curators = [
   {
@@ -28,11 +28,11 @@ export default function AboutPage() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
-          
+
           <h1 className="font-headline text-2xl font-bold text-coral italic">
             Culinary Atelier
           </h1>
-          
+
           <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-coral">
             <div className="w-full h-full bg-gradient-to-br from-coral to-coral-dark flex items-center justify-center text-white font-headline font-bold">
               CA
@@ -83,7 +83,7 @@ export default function AboutPage() {
           <h3 className="font-headline text-3xl font-bold text-center mb-8 text-dark">
             The Curators
           </h3>
-          
+
           <div className="space-y-8">
             {curators.map((curator, index) => (
               <div key={index} className="flex flex-col items-center">
@@ -107,13 +107,13 @@ export default function AboutPage() {
           </p>
           <div className="flex justify-center gap-6">
             <button className="w-14 h-14 bg-gradient-to-br from-amber-900 to-dark-burgundy rounded-full flex items-center justify-center text-coral hover:scale-110 transition-transform shadow-lg">
-              <Instagram className="w-6 h-6" />
+              <Camera className="w-6 h-6" />
             </button>
             <button className="w-14 h-14 bg-gradient-to-br from-amber-900 to-dark-burgundy rounded-full flex items-center justify-center text-coral hover:scale-110 transition-transform shadow-lg">
-              <Twitter className="w-6 h-6" />
+              <X className="w-6 h-6" />
             </button>
             <button className="w-14 h-14 bg-gradient-to-br from-amber-900 to-dark-burgundy rounded-full flex items-center justify-center text-coral hover:scale-110 transition-transform shadow-lg">
-              <Youtube className="w-6 h-6" />
+              <Play className="w-6 h-6" />
             </button>
           </div>
         </div>

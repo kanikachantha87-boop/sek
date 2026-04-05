@@ -35,7 +35,7 @@ const mainButtons = [
     gradient: 'from-amber-800 to-amber-950',
     border: 'border-amber-600/40',
     emoji: '⚠️',
-    href: '#',
+    href: '/home/food-impact',
   },
 ]
 

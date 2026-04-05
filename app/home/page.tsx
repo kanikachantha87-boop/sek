@@ -6,44 +6,44 @@ import { Search, ChevronRight } from 'lucide-react'
 const curatedPicks = [
   {
     id: 1,
-    title: 'Artisan Truffle Tagliatelle',
-    subtitle: "Chef's Signature Selection",
-    badge: 'SEASONAL SPECIAL',
+    title: 'មីតាហ្គ្លីយ៉ាតែល្អិតល្អន់',
+    subtitle: 'ការជ្រើសរើសពិសេសរបស់មេចុងភៅ',
+    badge: 'ពិសេសតាមរដូវ',
     badgeColor: 'bg-tertiary',
     image: '🍝',
   },
   {
     id: 2,
-    title: 'The Wagyu Burger',
-    subtitle: 'Butcher Premium Blend',
-    badge: 'BEST SELLER',
+    title: 'បឺហ្គឺវ៉ាហ្គ្យូ',
+    subtitle: 'សាច់ជ្រើសរើសពីអ្នកកាប់សាច់',
+    badge: 'លក់ដាច់បំផុត',
     badgeColor: 'bg-red-500',
     image: '🍔',
   },
 ]
 
 const genres = [
-  { name: 'PIZZA', icon: '🍕' },
-  { name: 'BURGER', icon: '🍔' },
-  { name: 'SALAD', icon: '🥗' },
-  { name: 'SUSHI', icon: '🍣' },
+  { name: 'ភីហ្សា', icon: '🍕' },
+  { name: 'បឺហ្គឺ', icon: '🍔' },
+  { name: 'សាឡាដ', icon: '🥗' },
+  { name: 'សូស៊ី', icon: '🍣' },
 ]
 
 const trending = [
   {
     id: 1,
-    name: 'The Nordic Salmon Bowl',
-    description: 'Smoked Atlantic salmon with dill-infused yogurt dressing and organic...',
+    name: 'បាទីសាម៉ុនស្ទីលណតឌីក',
+    description: 'សាម៉ុនស្ទូបជាមួយទឹកជ្រលក់យ៉ាអួតដែលមានក្លិនស្រស់ និងបន្លែសរីរាង្គ...',
     price: 18.50,
-    badge: 'ORGANIC CERTIFIED',
+    badge: 'បញ្ជាក់ជាសរីរាង្គ',
     badgeIcon: '🌿',
   },
   {
     id: 2,
-    name: 'Black Truffle Burrata',
-    description: 'Stone-baked crust topped with creamy burrata and fresh black...',
+    name: 'ប៊ូរ៉ាតាស្ទ្រូហ្វ ខ្មៅ',
+    description: 'នំបុ័ងដុតថ្មជាមួយប៊ូរ៉ាតាក្រែម និងស្ទ្រូហ្វខ្មៅស្រស់...',
     price: 24.00,
-    badge: "CHEF'S CHOICE",
+    badge: 'ជម្រើសមេចុងភៅ',
     badgeIcon: '⭐',
   },
 ]
@@ -52,24 +52,24 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       <Header />
-      
+
       <main className="px-5 py-6 space-y-8">
-        {/* Search Bar */}
+        {/* របារស្វែងរក */}
         <div className="relative">
           <Search className="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
           <input
             type="text"
-            placeholder="Search for seasonal flavors..."
+            placeholder="ស្វែងរករសជាតិតាមរដូវ..."
             className="input-search pl-14"
           />
         </div>
 
-        {/* Curated Picks */}
+        {/* ការជ្រើសរើសពិសេស */}
         <section>
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-2xl font-headline font-bold">Curated Picks</h2>
+            <h2 className="text-2xl font-headline font-bold">ការជ្រើសរើសពិសេស</h2>
             <button className="text-coral font-body text-sm font-medium hover:text-coral-light transition-colors">
-              View All
+              មើលទាំងអស់
             </button>
           </div>
 
@@ -83,9 +83,9 @@ export default function HomePage() {
                   {item.image}
                   <div className="absolute top-4 left-4 right-4">
                     <div className="text-center">
-                      <p className="text-amber-200/60 text-xs tracking-widest mb-1">GOURMET</p>
-                      <p className="text-amber-100 text-4xl font-headline font-bold tracking-wider">GOURMET</p>
-                      <p className="text-amber-200/80 text-sm tracking-widest">SAFE WORK</p>
+                      <p className="text-amber-200/60 text-xs tracking-widest mb-1">ម្ហូបឆ្នើម</p>
+                      <p className="text-amber-100 text-3xl font-headline font-bold tracking-wider">ម្ហូបឆ្នើម</p>
+                      <p className="text-amber-200/80 text-sm tracking-widest">ការងារសុវត្ថិភាព</p>
                     </div>
                   </div>
                   <span className={`absolute bottom-4 left-4 ${item.badgeColor} text-dark text-xs font-body font-bold px-3 py-1 rounded-full`}>
@@ -101,9 +101,9 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Explore Genres */}
+        {/* ស្វែងរកប្រភេទ */}
         <section>
-          <h2 className="text-2xl font-headline font-bold mb-5">Explore Genres</h2>
+          <h2 className="text-2xl font-headline font-bold mb-5">ស្វែងរកប្រភេទ</h2>
           <div className="grid grid-cols-4 gap-4">
             {genres.map((genre) => (
               <button
@@ -113,16 +113,16 @@ export default function HomePage() {
                 <div className="w-16 h-16 bg-gradient-to-br from-amber-900/30 to-dark rounded-full flex items-center justify-center text-3xl">
                   {genre.icon}
                 </div>
-                <span className="text-xs font-body font-bold tracking-wider">{genre.name}</span>
+                <span className="text-xs font-body font-bold tracking-wide">{genre.name}</span>
               </button>
             ))}
           </div>
         </section>
 
-        {/* Trending Now */}
+        {/* កំពុងពេញនិយម */}
         <section>
           <div className="flex items-center justify-between mb-5">
-            <h2 className="text-2xl font-headline font-bold">Trending Now</h2>
+            <h2 className="text-2xl font-headline font-bold">កំពុងពេញនិយម</h2>
             <div className="flex gap-2">
               <div className="w-2 h-2 rounded-full bg-coral"></div>
               <div className="w-2 h-2 rounded-full bg-gray-600"></div>
@@ -150,7 +150,7 @@ export default function HomePage() {
                   <p className="text-coral text-xl font-headline font-bold mt-2">${item.price.toFixed(2)}</p>
                 </div>
                 <button className="btn-primary px-6 py-2 text-sm flex-shrink-0">
-                  Add
+                  បន្ថែម
                 </button>
               </div>
             ))}

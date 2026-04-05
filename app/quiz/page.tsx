@@ -7,34 +7,33 @@ import { ArrowRight, Check } from 'lucide-react'
 const cuisines = [
   {
     id: 'italian',
-    name: 'Italian',
-    tag: 'ITALIAN',
-    subtitle: 'THE CLASSIC',
+    name: 'អ៊ីតាលី',
+    tag: 'អ៊ីតាលី',
+    subtitle: 'ម្ហូបបុរាណ',
     image: '🍝',
     gradient: 'from-amber-900/40 to-dark-card',
   },
   {
     id: 'japanese',
-    name: 'Japanese',
-    tag: 'JAPANESE',
-    subtitle: 'PURE ARTISTRY',
+    name: 'ជប៉ុន',
+    tag: 'ជប៉ុន',
+    subtitle: 'សិល្បៈដ៏ល្អ',
     image: '🍣',
     gradient: 'from-red-900/40 to-dark-card',
   },
   {
     id: 'mexican',
-    name: 'Mexican',
-    tag: 'MEXICAN',
-    subtitle: 'BOLD & SPICY',
+    name: 'មិចស៊ិក',
+    tag: 'មិចស៊ិក',
+    subtitle: 'ហឹរ និងក្លាំង',
     image: '🌮',
     gradient: 'from-green-900/40 to-dark-card',
-    selected: true,
   },
   {
     id: 'thai',
-    name: 'Thai',
-    tag: 'THAI',
-    subtitle: 'EXOTIC BALANCE',
+    name: 'ថៃ',
+    tag: 'ថៃ',
+    subtitle: 'ស្មើភាពប្លែក',
     image: '🍜',
     gradient: 'from-orange-900/40 to-dark-card',
   },
@@ -47,46 +46,46 @@ export default function QuizPage() {
   return (
     <div className="min-h-screen">
       <Header />
-      
+
       <main className="px-5 py-6">
-        {/* Progress Header */}
+        {/* ការវឌ្ឍន៍ */}
         <div className="mb-8">
           <div className="flex items-center justify-between mb-3">
             <div>
               <p className="text-coral text-xs tracking-widest font-body font-bold mb-1">
-                FLAVOR DIMENSIONS
+                វិមាត្ររសជាតិ
               </p>
               <p className="text-lg font-headline">
-                Question 03, <span className="text-coral">{progress}%</span> Complete
+                សំណួរទី ០៣, <span className="text-coral">{progress}%</span> បានបញ្ចប់
               </p>
             </div>
             <div className="text-right">
-              <div className="text-3xl font-headline font-bold text-coral">0m</div>
+              <div className="text-3xl font-headline font-bold text-coral">០ នាទី</div>
             </div>
           </div>
           <div className="w-full h-2 bg-dark-card rounded-full overflow-hidden">
-            <div 
+            <div
               className="h-full bg-gradient-to-r from-coral to-coral-light rounded-full transition-all duration-500"
               style={{ width: `${progress}%` }}
             />
           </div>
         </div>
 
-        {/* Question */}
+        {/* សំណួរ */}
         <div className="mb-8">
           <h2 className="text-3xl font-headline font-bold mb-2 leading-tight">
-            What's your favorite cuisine tonight?
+            តើអ្នកចូលចិត្តម្ហូបប្រភេទណានៅយប់នេះ?
           </h2>
           <p className="text-gray-400 text-sm font-body italic">
-            តើអ្នកចូលចិត្តម្ហូបអ្វីនៅយប់នេះ
+            ជ្រើសរើសម្ហូបដែលអ្នកចូលចិត្តបំផុត
           </p>
         </div>
 
-        {/* Options Grid */}
+        {/* ជម្រើស */}
         <div className="grid grid-cols-2 gap-4 mb-8">
           {cuisines.map((cuisine) => {
             const isSelected = selected === cuisine.id
-            
+
             return (
               <button
                 key={cuisine.id}
@@ -98,12 +97,12 @@ export default function QuizPage() {
                   ${isSelected ? 'ring-4 ring-tertiary' : 'ring-2 ring-transparent hover:ring-gray-700'}
                   transition-all duration-200
                 `}>
-                  {/* Card Content */}
                   <div className={`relative h-56 bg-gradient-to-br ${cuisine.gradient} p-4 flex flex-col`}>
-                    {/* Tag */}
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center gap-2">
-                        <span className="text-2xl">{cuisine.id === 'italian' ? '🍴' : cuisine.id === 'japanese' ? '✨' : cuisine.id === 'mexican' ? '🔥' : '🍲'}</span>
+                        <span className="text-2xl">
+                          {cuisine.id === 'italian' ? '🍴' : cuisine.id === 'japanese' ? '✨' : cuisine.id === 'mexican' ? '🔥' : '🍲'}
+                        </span>
                         <span className="text-coral text-xs font-body font-bold tracking-wider">
                           {cuisine.tag}
                         </span>
@@ -115,12 +114,10 @@ export default function QuizPage() {
                       )}
                     </div>
 
-                    {/* Image */}
                     <div className="flex-1 flex items-center justify-center text-7xl my-2">
                       {cuisine.image}
                     </div>
 
-                    {/* Title */}
                     <div className="mt-auto">
                       <p className="text-gray-400 text-xs font-body tracking-wider mb-1">
                         {cuisine.subtitle}
@@ -132,7 +129,6 @@ export default function QuizPage() {
                   </div>
                 </div>
 
-                {/* Selected Glow Effect */}
                 {isSelected && (
                   <div className="absolute inset-0 bg-tertiary/10 rounded-3xl blur-xl -z-10" />
                 )}
@@ -141,15 +137,14 @@ export default function QuizPage() {
           })}
         </div>
 
-        {/* Next Button */}
+        {/* ប៊ូតុងបន្ទាប់ */}
         <button className="w-full btn-primary flex items-center justify-center gap-3 text-lg">
-          <span>Next Step</span>
+          <span>ជំហានបន្ទាប់</span>
           <ArrowRight className="w-5 h-5" />
         </button>
 
-        {/* Step Indicator */}
         <p className="text-center text-gray-500 text-xs font-body tracking-wider mt-6">
-          STEP 3 OF 5 • បន្តការជួញ
+          ជំហានទី ៣ នៃ ៥ • បន្តដំណើរ
         </p>
       </main>
     </div>

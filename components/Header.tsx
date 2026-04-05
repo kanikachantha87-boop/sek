@@ -1,7 +1,6 @@
 'use client'
 
 import { Menu } from 'lucide-react'
-import Image from 'next/image'
 
 export default function Header() {
   return (
@@ -10,14 +9,14 @@ export default function Header() {
         <button className="text-coral hover:text-coral-light transition-colors">
           <Menu className="w-7 h-7" />
         </button>
-        
+
         <h1 className="font-headline text-2xl font-bold text-coral italic">
-          Culinary Atelier
+          កន្លែងធ្វើម្ហូប
         </h1>
-        
+
         <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-coral">
-          <div className="w-full h-full bg-gradient-to-br from-coral to-coral-dark flex items-center justify-center text-white font-headline font-bold">
-            CA
+          <div className="w-full h-full bg-gradient-to-br from-coral to-coral-dark flex items-center justify-center text-white font-headline font-bold text-xs">
+            ម្ហូប
           </div>
         </div>
       </div>

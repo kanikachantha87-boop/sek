@@ -5,11 +5,11 @@ import { usePathname } from 'next/navigation'
 import { Home, Utensils, Camera, HelpCircle, Info } from 'lucide-react'
 
 const navItems = [
-  { href: '/home', icon: Home, label: 'HOME' },
-  { href: '/type', icon: Utensils, label: 'TYPE' },
-  { href: '/scanner', icon: Camera, label: 'SCANNER' },
-  { href: '/quiz', icon: HelpCircle, label: 'QUIZ' },
-  { href: '/about', icon: Info, label: 'ABOUT' },
+  { href: '/home', icon: Home, label: 'ទំព័រដើម' },
+  { href: '/type', icon: Utensils, label: 'ប្រភេទ' },
+  { href: '/scanner', icon: Camera, label: 'ស្កែន' },
+  { href: '/quiz', icon: HelpCircle, label: 'កម្រងសំណួរ' },
+  { href: '/about', icon: Info, label: 'អំពីយើង' },
 ]
 
 export default function BottomNav() {
@@ -21,17 +21,16 @@ export default function BottomNav() {
         {navItems.map((item) => {
           const Icon = item.icon
           const isActive = pathname === item.href
-          
+
           return (
             <Link
               key={item.href}
               href={item.href}
-              className={`flex flex-col items-center justify-center gap-1 transition-colors ${
-                isActive ? 'text-coral' : 'text-gray-400 hover:text-gray-200'
-              }`}
+              className={`flex flex-col items-center justify-center gap-1 transition-colors ${isActive ? 'text-coral' : 'text-gray-400 hover:text-gray-200'
+                }`}
             >
               <Icon className="w-6 h-6" strokeWidth={isActive ? 2.5 : 2} />
-              <span className="text-[10px] font-body font-medium tracking-wider">{item.label}</span>
+              <span className="text-[9px] font-body font-medium tracking-wide">{item.label}</span>
             </Link>
           )
         })}

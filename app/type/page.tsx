@@ -1,6 +1,7 @@
 'use client'
 
 import Header from '@/components/Header'
+import Link from 'next/link'
 
 const foodTypes: { name: string; count: string }[] = []
 
@@ -20,18 +21,19 @@ export default function TypePage() {
         {/* ប៊ូតុងប្រភេទ */}
         <div className="grid grid-cols-2 gap-4 mb-8">
           {[
-            { label: 'បន្លែ', icon: '🥦', gradient: 'from-green-900/60 to-dark-card' },
-            { label: 'នំខ្មែរ', icon: '🍮', gradient: 'from-amber-900/60 to-dark-card' },
-            { label: 'ភេសជ្ជៈ', icon: '🧃', gradient: 'from-blue-900/60 to-dark-card' },
-            { label: 'ផ្លែឈើ', icon: '🍓', gradient: 'from-red-900/60 to-dark-card' },
+            { label: 'បន្លែ', icon: '🥦', gradient: 'from-green-900/60 to-dark-card', href: '/type/vegetable' },
+            { label: 'នំខ្មែរ', icon: '🍮', gradient: 'from-amber-900/60 to-dark-card', href: '#' },
+            { label: 'ភេសជ្ជៈ', icon: '🧃', gradient: 'from-blue-900/60 to-dark-card', href: '#' },
+            { label: 'ផ្លែឈើ', icon: '🍓', gradient: 'from-red-900/60 to-dark-card', href: '#' },
           ].map((btn) => (
-            <button
+            <Link
               key={btn.label}
+              href={btn.href}
               className={`bg-gradient-to-br ${btn.gradient} rounded-3xl p-6 flex flex-col items-center justify-center gap-4 border border-coral/20 hover:border-coral hover:scale-105 transition-all shadow-lg h-40`}
             >
               <span className="text-5xl">{btn.icon}</span>
               <span className="font-headline font-bold text-xl">{btn.label}</span>
-            </button>
+            </Link>
           ))}
         </div>
 

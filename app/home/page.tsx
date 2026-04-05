@@ -19,7 +19,7 @@ const mainButtons = [
     gradient: 'from-red-800 to-red-950',
     border: 'border-red-600/40',
     emoji: '🏥',
-    href: '#',
+    href: '/home/diseases',
   },
   {
     id: 3,

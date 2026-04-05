@@ -23,7 +23,7 @@ export default function TypePage() {
           {[
             { label: 'បន្លែ', icon: '🥦', gradient: 'from-green-900/60 to-dark-card', href: '/type/vegetable' },
             { label: 'នំខ្មែរ', icon: '🍮', gradient: 'from-amber-900/60 to-dark-card', href: '#' },
-            { label: 'ភេសជ្ជៈ', icon: '🧃', gradient: 'from-blue-900/60 to-dark-card', href: '#' },
+            { label: 'ភេសជ្ជៈ', icon: '🧃', gradient: 'from-blue-900/60 to-dark-card', href: '/type/drink' },
             { label: 'ផ្លែឈើ', icon: '🍓', gradient: 'from-red-900/60 to-dark-card', href: '/type/fruit' },
           ].map((btn) => (
             <Link

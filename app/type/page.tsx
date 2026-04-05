@@ -2,16 +2,7 @@
 
 import Header from '@/components/Header'
 
-const foodTypes = [
-  { icon: '🍕', name: 'ភីហ្សា', count: '១២ ម្ហូប' },
-  { icon: '🍔', name: 'បឺហ្គឺ', count: '០៨ ម្ហូប' },
-  { icon: '🍣', name: 'សូស៊ី', count: '១៥ ម្ហូប' },
-  { icon: '🥗', name: 'សាឡាដ', count: '១០ ម្ហូប' },
-  { icon: '🍜', name: 'មីស៊ុប', count: '០៩ ម្ហូប' },
-  { icon: '🍰', name: 'នំបង្អែម', count: '០៦ ម្ហូប' },
-  { icon: '🥩', name: 'សាច់អាំង', count: '១១ ម្ហូប' },
-  { icon: '🍱', name: 'ម្ហូបជប៉ុន', count: '០៧ ម្ហូប' },
-]
+const foodTypes: { name: string; count: string }[] = []
 
 export default function TypePage() {
   return (

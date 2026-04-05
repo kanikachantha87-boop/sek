@@ -27,7 +27,7 @@ const mainButtons = [
     gradient: 'from-pink-800 to-pink-950',
     border: 'border-pink-600/40',
     emoji: '💪',
-    href: '#',
+    href: '/home/health-benefits',
   },
   {
     id: 4,
